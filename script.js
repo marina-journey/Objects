@@ -57,6 +57,34 @@
 
 // console.log(user5, user7);
 
+//Home work
+const sportsman = {
+    sport: 'tennis',
+    name: 'Elina',
+    age: 25,
+    gender: 'female',
+    country: 'Ukraine',
+};
+console.log(sportsman);
 
+function copySportsman(obj) {
+    let clone = {};
+    for (let key in obj) {
+    clone[key] = obj[key]; 
+    }
+    return clone;
+};
 
+console.log(copySportsman(sportsman));
 
+function strNumber (obj) {
+    let number = 0;
+    for (const key in obj) {
+        if (typeof obj[key] === 'string') {
+        number++;
+        };
+    };
+    return number;
+};
+
+console.log(strNumber(sportsman));
